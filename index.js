@@ -1,4 +1,4 @@
-var alphabets = {
+var regex = {
     "Latin": new RegExp("[A-Za-z]"),
     "Cyrillic": new RegExp("[\u0400-\u04FF\u2DE0-\u2DFF\uA640-\uA69F\u1C80-\u1C8F]"),
     "Greek": new RegExp("[\u0370-\u03FF\u1F00-\u1FFF]"),
@@ -11,6 +11,21 @@ var alphabets = {
     "Hiragana": new RegExp("[\u3040-\u309F]"),
     "Katakana": new RegExp("[\u30A0-\u30FF\u31F0-\u31FF\u3200-\u32FF\uFF00-\uFFEF]"),
     "numbers": new RegExp("[0-9]")
+};
+
+var alphabets = {
+    "Latin": "Latin",
+    "Cyrillic": "Cyrillic",
+    "Greek": "Greek",
+    "Armenian": "Armenian",
+    "Georgian": "Georgian",
+    "Hangul": "Hangul",
+    "Arabic": "Arabic",
+    "Hebrew": "Hebrew",
+    "Hanzi": "Hanzi",
+    "Hiragana": "Hiragana",
+    "Katakana": "Katakana",
+    "numbers": "numbers"
 };
 
 function detect(string){
@@ -49,18 +64,18 @@ function detectAll(string){
 }
 
 function letterMatch(letter){
-    if(alphabets.Arabic.test(letter)) return "Arabic";
-    if(alphabets.Armenian.test(letter)) return "Armenian";
-    if(alphabets.Cyrillic.test(letter)) return "Cyrillic";
-    if(alphabets.Georgian.test(letter)) return "Georgian";
-    if(alphabets.Greek.test(letter)) return "Greek";
-    if(alphabets.Hangul.test(letter)) return "Hangul";
-    if(alphabets.Hanzi.test(letter)) return "Hanzi";
-    if(alphabets.Hebrew.test(letter)) return "Hebrew";
-    if(alphabets.Hiragana.test(letter)) return "Hiragana";
-    if(alphabets.Katakana.test(letter)) return "Katakana";
-    if(alphabets.Latin.test(letter)) return "Latin";
-    if(alphabets.numbers.test(letter)) return "numbers";
+    if(regex.Arabic.test(letter)) return "Arabic";
+    if(regex.Armenian.test(letter)) return "Armenian";
+    if(regex.Cyrillic.test(letter)) return "Cyrillic";
+    if(regex.Georgian.test(letter)) return "Georgian";
+    if(regex.Greek.test(letter)) return "Greek";
+    if(regex.Hangul.test(letter)) return "Hangul";
+    if(regex.Hanzi.test(letter)) return "Hanzi";
+    if(regex.Hebrew.test(letter)) return "Hebrew";
+    if(regex.Hiragana.test(letter)) return "Hiragana";
+    if(regex.Katakana.test(letter)) return "Katakana";
+    if(regex.Latin.test(letter)) return "Latin";
+    if(regex.numbers.test(letter)) return "numbers";
     return "undefined";
 }
 
@@ -68,5 +83,6 @@ function letterMatch(letter){
 module.exports.detect = detect;
 module.exports.detectAll = detectAll;
 module.exports.letterMatch = letterMatch;
+module.exports.alphabets = alphabets;
 
 
