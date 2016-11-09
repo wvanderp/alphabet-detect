@@ -1,0 +1,26 @@
+{
+  "name": "alphabet-detect",
+  "version": "0.1.0",
+  "description": "a library for detecting alphabets in a strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvanderp/alphabet-detect.git"
+  },
+  "keywords": [
+    "alphabets"
+  ],
+  "author": "wouter van der plas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvanderp/alphabet-detect/issues"
+  },
+  "homepage": "https://github.com/wvanderp/alphabet-detect#readme",
+  "dependencies": {
+    "mocha": "^3.1.2",
+    "should": "^11.1.1"
+  }
+}
