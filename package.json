@@ -19,7 +19,7 @@
     "url": "https://github.com/wvanderp/alphabet-detect/issues"
   },
   "homepage": "https://github.com/wvanderp/alphabet-detect#readme",
-  "dependencies": {
+  "devDependencies": {
     "mocha": "^3.1.2",
     "should": "^11.1.1"
   }
